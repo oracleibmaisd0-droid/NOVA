@@ -2,46 +2,23 @@
 <head>  
 <meta charset="UTF-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>NOVA Verify Design</title> 
-
-<link rel="icon" href="https://www.dropbox.com/scl/fi/x216ccg9fuvlrmi2i55u8/NovaIco.svg?rlkey=y96rph1cwosghio0ryisz3yne&st=r3r9qfrb&raw=1">
-
-<link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
-
-<style>  
-:root{  
-  --x:50%;  
-  --y:50%;  
-}  
+<title>NOVA Verify Design</title>   <link rel="icon" href="https://www.dropbox.com/scl/fi/x216ccg9fuvlrmi2i55u8/NovaIco.svg?rlkey=y96rph1cwosghio0ryisz3yne&st=r3r9qfrb&raw=1">  
+<link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">  <style>  
+:root{ --x:50%; --y:50%; }  
   
-html {
-  scroll-behavior: smooth;
-}  
-  
-body{  
+html { scroll-behavior: smooth; }  
+body {  
   margin:0;  
-font-family: 'Product Sans', sans-serif;
+  font-family: 'Product Sans', sans-serif;  
   background: radial-gradient(circle at top,#020617 0%, #000005 55%, #000000 100%);  
   color:#fff;  
   overflow-x:hidden;  
 }  
   
 /* ANIMACIONES */  
-@keyframes fadeDown{  
-  from{opacity:0; transform:translateY(-40px);}  
-  to{opacity:1; transform:translateY(0);}  
-}  
-  
-@keyframes fadeUp{  
-  from{opacity:0; transform:translateY(40px);}  
-  to{opacity:1; transform:translateY(0);}  
-}  
-  
-@keyframes pop{  
-  0%{opacity:0; transform:translateY(25px) scale(.85);}  
-  60%{opacity:1; transform:translateY(-4px) scale(1.05);}  
-  100%{opacity:1; transform:translateY(0) scale(1);}  
-}  
+@keyframes fadeDown{ from{opacity:0; transform:translateY(-40px);} to{opacity:1; transform:translateY(0);} }  
+@keyframes fadeUp{ from{opacity:0; transform:translateY(40px);} to{opacity:1; transform:translateY(0);} }  
+@keyframes pop{ 0%{opacity:0; transform:translateY(25px) scale(.85);} 60%{opacity:1; transform:translateY(-4px) scale(1.05);} 100%{opacity:1; transform:translateY(0) scale(1);} }  
   
 /* CABECERA */  
 header{  
@@ -54,7 +31,6 @@ header{
   overflow:hidden;  
   animation:fadeDown .9s cubic-bezier(.19,1,.22,1) both;  
 }  
-  
 header::before{  
   content:"";  
   position:absolute;  
@@ -63,21 +39,11 @@ header::before{
   opacity:0;  
   transition:opacity .25s;  
 }  
-  
 header.active::before{opacity:1}  
   
 /* CONTENIDO */  
-main{  
-  max-width:1200px;  
-  margin:auto;  
-  padding:45px 15px 60px;  
-}  
-  
-.grid{  
-  display:grid;  
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));  
-  gap:24px;  
-}  
+main{ max-width:1200px; margin:auto; padding:45px 15px 60px; }  
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; }  
   
 /* TARJETAS */  
 .card{  
@@ -87,12 +53,9 @@ main{
   box-shadow:0 15px 45px rgba(0,0,0,.55);  
   transition:.25s;  
   position:relative;  
-  
-  /* ESTADO INICIAL PARA POP */  
   opacity:0;  
   transform:translateY(25px) scale(.85);  
 }  
-  
 .card::before{  
   content:"";  
   position:absolute;  
@@ -102,39 +65,25 @@ main{
   opacity:0;  
   transition:opacity .25s, background-position .1s;  
 }  
-  
 .card.active::before{opacity:1}  
-  
-.card:hover{  
-  transform:translateY(-8px) scale(1.03);  
-  box-shadow:0 25px 70px rgba(0,0,0,.75);  
-}  
-  
-.card img, .card video{  
-  width:100%;  
-  height:185px;  
-  object-fit:cover;  
-}  
+.card:hover{ transform:translateY(-8px) scale(1.03); box-shadow:0 25px 70px rgba(0,0,0,.75); }  
+.card img, .card video{ width:100%; height:185px; object-fit:cover; }  
   
 .content{padding:16px 16px 22px;}  
 .content h3{margin:0 0 8px;}  
 .content p{opacity:.85; line-height:1.45em; min-height:48px;}  
-  
-/* BOTÓN */  
 .content a{  
   display:inline-block;  
   margin-top:12px;  
   padding:9px 18px;  
   background:linear-gradient(135deg,#22d3ee,#0ea5e9);  
-  color:#001;  
+  color:#fff;  
   border-radius:25px;  
   font-weight:600;  
   text-decoration:none;  
-  box-shadow:0 5px 15px rgba(14,165,233,.4);  
   position:relative;  
   overflow:hidden;  
 }  
-  
 .content a::after{  
   content:"";  
   position:absolute;  
@@ -143,7 +92,6 @@ main{
   opacity:0;  
   transition:opacity .25s, background-position .1s;  
 }  
-  
 .content a.active::after{opacity:.9}  
 .content a span{position:relative; z-index:2}  
   
@@ -157,7 +105,6 @@ footer{
   overflow:hidden;  
   animation:fadeUp .9s cubic-bezier(.19,1,.22,1) .5s both;  
 }  
-  
 footer::before{  
   content:"";  
   position:absolute;  
@@ -167,69 +114,90 @@ footer::before{
   opacity:0;  
   transition:opacity .25s, background-position .1s;  
 }  
-  
 footer.active::before{opacity:1}  
-</style>  </head>  <body>  <header>  
-    <img src="https://www.dropbox.com/scl/fi/rxxnylm51usmmwn4mv3ye/NOVA-5.gif?rlkey=1aocldrbrkfzcwlrv5aqvlcw4&st=179cbel2&raw=1" alt="NOVA" width="300">  
-  <p>Categoría recomendada por NOVA Design</p>  
+  
+/* V铆deo dentro del span/bot贸n */  
+.animacion{  
+  cursor:pointer;  
+  display:inline-block;  
+  width:50px;  
+  height:50px;  
+}  
+video.animacion{  
+  width:30%;  
+  height:30%;  
+  background:transparent;  
+}  
+
+.content a{
+  display:inline-flex;
+  padding:0;              /* 馃敟 clave */
+  width:fit-content;      /* 馃敟 clave */
+}
+
+.content a span{
+  display:flex;
+}
+
+video.animacion{
+  display:block;          /* elimina espacio fantasma */
+  width:50px;
+  height:50px;
+}
+  
+/* Ajustes para header video */  
+header video{ max-width:300px; width:100%; height:auto; }  
+</style>  </head>  
+<body>  <header>  
+  <video autoplay muted playsinline preload="auto">  
+    <source src="https://www.dropbox.com/scl/fi/4lyvz9azxc8nn886df9uw/Nov.webm?rlkey=q4oreifd4qelpln05hlffj50q&st=83z40a9w&raw=1" type="video/webm">  
+  </video>  
+  <p>Categor铆a recomendada por NOVA Design</p>  
 </header>  <main>  
-  <div class="grid">  <div class="card" id="1" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.15s;">  
-  <video class="lazy-video" muted playsinline loop>  
-    <source src="https://www.dropbox.com/scl/fi/kl47d54x6cvmz7jcj3jwp/__-__-__-__-__-__Or-culo-_-NN.Type-KeyBoard-69-Clip-1_3-_-Instagram.mp4?rlkey=4s9v7wom6m8ebxf3wnvg41q06&raw=1" type="video/mp4">  
-  </video>  
-  <div class="content">  
-    <h3>NIN Type / Keyboard 69<br>⭐⭐⭐</h3>  
-    <p>Diseño<br><br><svg width="15" height="15" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Triángulo amarillo con esquinas redondeadas">
-  <path d="M60 15 
-           L105 100 
-           L15 100 
-           Z" 
-        fill="#facc15" 
-        stroke="#facc15" 
-        stroke-linejoin="round" 
-        stroke-width="10"/>
-</svg>&nbsp;&nbsp;<font color="red">Puede no estar actualmente disponible para iOS</font></p>  
-    <a href="https://d.apkpure.com/b/APK/com.jormy.sixtynine?versionCode=427"><span>Descargar</span></a>  
-  </div>  
-</div>  
-
-<div class="card" id="2" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.3s;">  
-  <video class="lazy-video" muted playsinline loop>  
-    <source src="https://www.dropbox.com/scl/fi/iti66sdiqo4d5eeugy7ab/SpatialNumbers_240p.mp4?rlkey=ehyl29uhkjyzso2mv5w46tm8l&st=rhlx9jzg&raw=1" type="video/mp4">  
-  </video>  
-  <div class="content">  
-    <h3>Spatial Number Galaxy Watch 7<br>⭐⭐⭐⭐⭐</h3>  
-    <p>Diseño / Práctico</p>  
-    <a href="https://www.samsung.com/ae/support/mobile-devices/how-many-new-watch-faces-are-on-galaxy-watch-ultra-and-watch7-and-which-are-exclusive-to-the-watch-ultra/?utm_source=chatgpt.com"><span>Leer Post</span></a>  
-  </div>  
-</div>  
-
-<div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.45s;">  
-  <video class="lazy-video" muted playsinline loop>  
-    <source src="https://www.dropbox.com/scl/fi/i32u91kqxekoyedw1r3ff/Timely-Alarm-Clock.mp4?rlkey=5yqnf737bfsg86xwvymg8g2sg&st=fhx2xacy&raw=1" type="video/mp4">  
-  </video>
-  <div class="content">  
-    <h3>Timely<br>⭐⭐⭐⭐</h3>  
-    <p>Diseño / Práctico<br><br><svg width="15" height="15" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Triángulo amarillo con esquinas redondeadas">
-  <path d="M60 15 
-           L105 100 
-           L15 100 
-           Z" 
-        fill="#facc15" 
-        stroke="#facc15" 
-        stroke-linejoin="round" 
-        stroke-width="10"/>
-</svg>&nbsp;&nbsp;<font color="red">No compatible para versiones nuevas de Android</font><br><br><a href="https://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html">Proyecto de Timely Transición Morphing</a></p>  
-    <a href="https://d.apkpure.com/b/APK/ch.bitspin.timely?versionCode=34"><span>Descargar</span></a>  
-  </div>  
-</div>
-
+  <div class="grid">  
+    <!-- TARJETA 1 -->  
+    <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.15s;">  
+      <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/kl47d54x6cvmz7jcj3jwp/__-__-__-__-__-__Or-culo-_-NN.Type-KeyBoard-69-Clip-1_3-_-Instagram.mp4?rlkey=4s9v7wom6m8ebxf3wnvg41q06&raw=1"></video>  
+      <div class="content">  
+        <h3>NIN Type / Keyboard 69<br>猸愨瓙猸�</h3>  
+        <p>Dise帽o<br><br>  
+          <svg width="15" height="15" viewBox="0 0 120 90">  
+            <path d="M60 15 L105 100 L15 100 Z" fill="#facc15" stroke="#facc15" stroke-linejoin="round" stroke-width="10"/>  
+          </svg>&nbsp;&nbsp;<font color="red">Puede no estar actualmente disponible para iOS</font>  
+        </p>  
+        <a href="https://d.apkpure.com/b/APK/com.jormy.sixtynine?versionCode=427">  
+          <span>
+            <video class="animacion" preload="auto" playsinline muted>  
+              <source src="https://www.dropbox.com/scl/fi/f828wha3tj831fle0cqb6/ezgif-8814ddaf1b6b6bd2.webm?rlkey=wh4e1mhlaljola0ku19fynit8&st=jj1z3nto&raw=1" type="video/webm">  
+            </video>  
+          </span>  
+        </a>  
+      </div>  
+    </div>  
+    <!-- TARJETA 2 -->  
+    <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.3s;">  
+      <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/iti66sdiqo4d5eeugy7ab/SpatialNumbers_240p.mp4?rlkey=ehyl29uhkjyzso2mv5w46tm8l&st=rhlx9jzg&raw=1"></video>  
+      <div class="content">  
+        <h3>Spatial Number Galaxy Watch 7<br>猸愨瓙猸愨瓙猸�</h3>  
+        <p>Dise帽o / Pr谩ctico</p>  
+        <a href="https://www.samsung.com/ae/support/mobile-devices/how-many-new-watch-faces-are-on-galaxy-watch-ultra-and-watch7-and-which-are-exclusive-to-the-watch-ultra/?utm_source=chatgpt.com"><span>&nbsp;&nbsp;Leer Post&nbsp;&nbsp;</span></a>  
+      </div>  
+    </div>  
+    <!-- TARJETA 3 -->  
+    <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.45s;">  
+      <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/i32u91kqxekoyedw1r3ff/Timely-Alarm-Clock.mp4?rlkey=5yqnf737bfsg86xwvymg8g2sg&st=fhx2xacy&raw=1"></video>  
+      <div class="content">  
+        <h3>Timely<br>猸愨瓙猸愨瓙</h3>  
+        <p>Dise帽o / Pr谩ctico</p>  
+        <a href="https://d.apkpure.com/b/APK/ch.bitspin.timely?versionCode=34"><span>Descargar</span></a>  
+      </div>  
+    </div>  
   </div>  
 </main>  <footer>  
-  © 2026 - NOVA El ultra diseño interactivo. Oracle, un proyecto diseñado por NOVA  
+  漏 2026 - NOVA El ultra dise帽o interactivo. Oracle, un proyecto dise帽ado por NOVA  
   <img src="https://www.dropbox.com/scl/fi/mtlk6hpug4gnk2rzfvfhy/OracleMotion3.gif?rlkey=bmaz2uhvox2pex2lxeyqqjs5g&raw=1" alt="Oracle" width="50">  
 </footer>  <script>  
-// EFECTO RADIAL HOVER
+// EFECTO RADIAL HOVER  
 function track(x, y, el){  
   el.style.setProperty('--x', x + '%');  
   el.style.setProperty('--y', y + '%');  
@@ -238,43 +206,49 @@ function track(x, y, el){
 document.querySelectorAll('header, .card, .content a, footer').forEach(el=>{  
   el.addEventListener('mouseenter', ()=> el.classList.add('active'));  
   el.addEventListener('mouseleave', ()=> el.classList.remove('active'));  
-  
   el.addEventListener('mousemove', e=>{  
     const r = el.getBoundingClientRect();  
     track(((e.clientX - r.left)/r.width)*100, ((e.clientY - r.top)/r.height)*100, el);  
   });  
-  
-  el.addEventListener('touchstart', e=>{  
-    el.classList.add('active');  
-  }, {passive:true});  
-  
+  el.addEventListener('touchstart', ()=> el.classList.add('active'), {passive:true});  
   el.addEventListener('touchmove', e=>{  
-    const t = e.touches[0];  
-    const r = el.getBoundingClientRect();  
+    const t = e.touches[0]; const r = el.getBoundingClientRect();  
     track(((t.clientX - r.left)/r.width)*100, ((t.clientY - r.top)/r.height)*100, el);  
   }, {passive:true});  
-  
   el.addEventListener('touchend', ()=> el.classList.remove('active'));  
 });  
   
-// REPRODUCCIÓN AUTOMÁTICA DE VÍDEOS POR TARJETA (LAZY)
+// LAZY LOADING V脥DEOS DE TARJETA  
 document.addEventListener("DOMContentLoaded", () => {  
   const cards = document.querySelectorAll(".card");  
+  const observer = new IntersectionObserver(entries => {  
+    entries.forEach(entry=>{  
+      const video = entry.target.querySelector(".lazy-video");  
+      if(!video) return;  
   
-  const observer = new IntersectionObserver((entries) => {  
-    entries.forEach(entry => {  
-      const video = entry.target.querySelector("video");  
-      if (!video) return;  
-  
-      if (entry.isIntersecting) {  
-        video.play().catch(err => console.log("No se pudo reproducir:", err));  
-      } else {  
+      if(entry.isIntersecting){  
+        if(!video.src) video.src = video.dataset.src;  
+        video.play().catch(err=>console.log("No se pudo reproducir:", err));  
+      }else{  
         video.pause();  
       }  
     });  
-  }, { threshold: 0.5 });  
+  }, { threshold:0.5 });  
+  cards.forEach(card=>observer.observe(card));  
+});  
   
-  cards.forEach(card => observer.observe(card));  
+// ONECLICK DOWN PARA BOT脫N V脥DEO  
+document.querySelectorAll(".animacion").forEach(video=>{  
+  video.addEventListener("loadeddata", ()=>{ video.currentTime=0; video.pause(); });  
+  const link = video.closest("a");  
+  if(link){  
+    link.addEventListener("click", e=>{  
+      e.preventDefault();  
+      video.currentTime=0;  
+      video.play();  
+      video.addEventListener("ended", ()=>{ window.location.href=link.href }, { once:true });  
+    });  
+  }  
 });  
 </script>  </body>  
 </html>
