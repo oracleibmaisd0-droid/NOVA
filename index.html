@@ -116,7 +116,7 @@ footer::before{
 }  
 footer.active::before{opacity:1}  
   
-/* V铆deo dentro del span/bot贸n */  
+/* Vídeo dentro del span/botón */  
 .animacion{  
   cursor:pointer;  
   display:inline-block;  
@@ -131,8 +131,8 @@ video.animacion{
 
 .content a{
   display:inline-flex;
-  padding:0;              /* 馃敟 clave */
-  width:fit-content;      /* 馃敟 clave */
+  padding:0;              /*  clave */
+  width:fit-content;      /*  clave */
 }
 
 .content a span{
@@ -152,15 +152,15 @@ header video{ max-width:300px; width:100%; height:auto; }
   <video autoplay muted playsinline preload="auto">  
     <source src="https://www.dropbox.com/scl/fi/4lyvz9azxc8nn886df9uw/Nov.webm?rlkey=q4oreifd4qelpln05hlffj50q&st=83z40a9w&raw=1" type="video/webm">  
   </video>  
-  <p>Categor铆a recomendada por NOVA Design</p>  
+  <p>Categoría recomendada por NOVA Design</p>  
 </header>  <main>  
   <div class="grid">  
     <!-- TARJETA 1 -->  
     <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.15s;">  
       <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/kl47d54x6cvmz7jcj3jwp/__-__-__-__-__-__Or-culo-_-NN.Type-KeyBoard-69-Clip-1_3-_-Instagram.mp4?rlkey=4s9v7wom6m8ebxf3wnvg41q06&raw=1"></video>  
       <div class="content">  
-        <h3>NIN Type / Keyboard 69<br>猸愨瓙猸�</h3>  
-        <p>Dise帽o<br><br>  
+        <h3>NIN Type / Keyboard 69<br>⭐⭐⭐⭐</h3>  
+        <p>Diseño<br><br>  
           <svg width="15" height="15" viewBox="0 0 120 90">  
             <path d="M60 15 L105 100 L15 100 Z" fill="#facc15" stroke="#facc15" stroke-linejoin="round" stroke-width="10"/>  
           </svg>&nbsp;&nbsp;<font color="red">Puede no estar actualmente disponible para iOS</font>  
@@ -178,8 +178,8 @@ header video{ max-width:300px; width:100%; height:auto; }
     <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.3s;">  
       <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/iti66sdiqo4d5eeugy7ab/SpatialNumbers_240p.mp4?rlkey=ehyl29uhkjyzso2mv5w46tm8l&st=rhlx9jzg&raw=1"></video>  
       <div class="content">  
-        <h3>Spatial Number Galaxy Watch 7<br>猸愨瓙猸愨瓙猸�</h3>  
-        <p>Dise帽o / Pr谩ctico</p>  
+        <h3>Spatial Number Galaxy Watch 7<br>⭐⭐⭐⭐⭐</h3>  
+        <p>Diseño / Práctico</p>  
         <a href="https://www.samsung.com/ae/support/mobile-devices/how-many-new-watch-faces-are-on-galaxy-watch-ultra-and-watch7-and-which-are-exclusive-to-the-watch-ultra/?utm_source=chatgpt.com"><span>&nbsp;&nbsp;Leer Post&nbsp;&nbsp;</span></a>  
       </div>  
     </div>  
@@ -187,14 +187,14 @@ header video{ max-width:300px; width:100%; height:auto; }
     <div class="card" style="animation:pop 1s cubic-bezier(.19,1,.22,1) forwards; animation-delay:.45s;">  
       <video class="lazy-video" muted playsinline loop preload="none" data-src="https://www.dropbox.com/scl/fi/i32u91kqxekoyedw1r3ff/Timely-Alarm-Clock.mp4?rlkey=5yqnf737bfsg86xwvymg8g2sg&st=fhx2xacy&raw=1"></video>  
       <div class="content">  
-        <h3>Timely<br>猸愨瓙猸愨瓙</h3>  
-        <p>Dise帽o / Pr谩ctico</p>  
+        <h3>Timely<br>⭐⭐⭐⭐⭐</h3>  
+        <p>Diseño / Práctico</p>  
         <a href="https://d.apkpure.com/b/APK/ch.bitspin.timely?versionCode=34"><span>Descargar</span></a>  
       </div>  
     </div>  
   </div>  
 </main>  <footer>  
-  漏 2026 - NOVA El ultra dise帽o interactivo. Oracle, un proyecto dise帽ado por NOVA  
+  © 2026 - NOVA El ultra diseño interactivo. Oracle, un proyecto diseñado por NOVA  
   <img src="https://www.dropbox.com/scl/fi/mtlk6hpug4gnk2rzfvfhy/OracleMotion3.gif?rlkey=bmaz2uhvox2pex2lxeyqqjs5g&raw=1" alt="Oracle" width="50">  
 </footer>  <script>  
 // EFECTO RADIAL HOVER  
@@ -218,7 +218,7 @@ document.querySelectorAll('header, .card, .content a, footer').forEach(el=>{
   el.addEventListener('touchend', ()=> el.classList.remove('active'));  
 });  
   
-// LAZY LOADING V脥DEOS DE TARJETA  
+// LAZY LOADING VÍDEOS DE TARJETA  
 document.addEventListener("DOMContentLoaded", () => {  
   const cards = document.querySelectorAll(".card");  
   const observer = new IntersectionObserver(entries => {  
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach(card=>observer.observe(card));  
 });  
   
-// ONECLICK DOWN PARA BOT脫N V脥DEO  
+// ONECLICK DOWN PARA BOTÓN VÍDEO  
 document.querySelectorAll(".animacion").forEach(video=>{  
   video.addEventListener("loadeddata", ()=>{ video.currentTime=0; video.pause(); });  
   const link = video.closest("a");  
